@@ -1,0 +1,14 @@
+gpu familier
+docker-container familier
+antcolony, PSO, XGBoost Regressor, Tiger, B-colony, etc
+Genetic algorithms
+ML - Ram jada wale laptop par - no need of GPU
+DL - ke liye GPU dekhenge
+
+
+factors -
+socio-economical
+cultural
+
+books ke factor 
+need to merge then find it
