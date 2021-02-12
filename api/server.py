@@ -1,5 +1,5 @@
 from flask import Flask, request, make_response, jsonify, send_file, send_from_directory, safe_join, abort
-import shell, listAll, moveFiles, startp
+import shell, listAll, moveFiles, startp, health
 from flask_cors import CORS
 import shutil
 import os
@@ -12,7 +12,7 @@ CORS(app)
 
 
 
-"""					Platy Run 				"""
+"""					 Run 				"""
 # output of a shell command
 @app.route('/shell', methods=['POST'])
 def shellFun(): 
@@ -94,7 +94,7 @@ def LogoutSystemFun():
 
 
 
-"""					Platy Share				"""
+"""					 Share				"""
 # get a file
 @app.route('/getFile', methods=['GET'])
 def getFileFun(): 
@@ -131,6 +131,16 @@ def moveFilesFun():
     except:
     	abort(404)
 """									"""
+
+
+"""					Health 				"""
+@app.route('/getHealthPredictions', methods=['POST'])
+def getHealthPredictionsFun():
+	print("inside health fun")
+	print(request.json['user'])
+	return jsonify(health.getprediction(request.json['user']))
+
+
 
 
 

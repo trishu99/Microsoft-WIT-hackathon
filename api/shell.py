@@ -21,7 +21,7 @@ def runCommand(command):
 		print(ret)
 	except:
 		ret.append('wrong or incomplete cmd')
-	return ret;
+	return ret
 
 
 '''
