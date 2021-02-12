@@ -8,6 +8,8 @@ import {
   NotificationManager,
 } from "react-notifications";
 import "react-notifications/lib/notifications.css";
+//notifications are created using settimeout, just for sake of showing
+//in actual, we can schedule daily notification in android app easily
 
 const SList = (props) => (
   <tr>
