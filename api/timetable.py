@@ -1,3 +1,5 @@
+# not able to find dataset and pretrained ml model so for time being used hard coded
+# and simple kind of rule based engine is crated
 import re
 
 rules = {

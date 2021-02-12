@@ -1,3 +1,4 @@
+# not able to find dataset and pretrained ml model so for time being used hard coded
 def getprediction(userData):
     suggestions = []
     suggestions.append("Avoid Sugar sweetened food")
