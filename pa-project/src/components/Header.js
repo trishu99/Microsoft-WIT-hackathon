@@ -20,6 +20,9 @@ export default class Header extends Component {
             <Link to="/Share" className='nav-item nav-link'>Share</Link>
             <Link to="/Run" className='nav-item nav-link'>Run</Link>	
 			<Link to="/Notes" className='nav-item nav-link'>Notes</Link>	
+			<Link to="/Health" className='nav-item nav-link'>Health</Link>	
+			<Link to="/TimeTable" className='nav-item nav-link'>TimeTable</Link>	
+
 			</div>
 			</h2>
 			</nav>			

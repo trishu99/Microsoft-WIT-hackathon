@@ -381,9 +381,6 @@ class Run extends React.Component {
 
 
 	
-	//openDialog = () => this.setState({ isDialogOpen: true })
- 
-   // handleClose = () => this.setState({ isDialogOpen: false })
 
 
 
@@ -393,6 +390,65 @@ class Run extends React.Component {
 			<div id="container">
 				<Header/>
 				<center>
+				<h1>power options</h1>
+				<br/>
+				<button onClick={this.shutdownnow}>shutdown now</button>
+				<h4>{this.state.sdnow}</h4>
+				{/*<button type="button" onClick={this.openDialog}>Open Dialog</button>
+                {
+                    this.state.isDialogOpen &&
+                    <Dialog
+                        title="Dialog Title"
+                        modal={true}
+						onClose={this.handleClose}
+						isDraggable={false}
+
+                        buttons={
+                            [{
+                                text: "Close",
+                                onClick: () => this.handleClose()
+                            }]
+                        }>
+                        <h1>Dialog Content</h1>
+                        <p>More Content. Anything goes here</p>
+                    </Dialog>
+                }*/}
+
+
+				<input type="text" value={this.state.shutdownaftermin} name="shutdownaftermin" onChange={this.handleChange}/>
+				<button onClick={this.shutdownaftergivenmin}>shutdown after mins</button>
+				<h4>{this.state.sdaftermin}</h4>
+				{/*<button onClick={this.shutdowncancel}>cancel the shutdown</button>
+				<h4>{this.state.cancelval}</h4>*/}
+
+				<h5>Give time in 24-hour format when you want to shutdown your pc</h5>
+				<input type="text" value={this.state.shutdownattime} name="shutdownattime" onChange={this.handleChange}/>
+				<button onClick={this.shutdownattime}>shutdown at given time</button>
+				<h4>{this.state.sdattime}</h4>
+
+				<button onClick={this.shutdowncancel}>cancel the shutdown</button>
+				<h4>{this.state.cancelval}</h4>
+
+
+				<button onClick={this.restartsystem}>restart system</button>
+				<h4>{this.state.restartsys}</h4>
+
+				<button onClick={this.rebootsystem}>reboot system</button>
+				<h4>{this.state.rebootsys}</h4>
+
+				<button onClick={this.suspendsystem}>suspend system</button>
+				<h4>{this.state.suspendsys}</h4>
+
+				<button onClick={this.hibernatesystem}>place system in hibernate mode</button>
+				<h4>{this.state.hibernatesys}</h4>
+
+				
+				<button onClick={this.screenlocksystem}>lock the screen</button>
+				<h4>{this.state.screenlocksys}</h4>
+	
+				<button onClick={this.logoutsystem}>logout</button>
+				<h4>{this.state.logoutsys}</h4>
+	
 				<h5>provide either processname or processid</h5>
 				
 				<h1>Start processes</h1>
@@ -459,65 +515,7 @@ class Run extends React.Component {
 				<br/><br/><br/>
 
 
-				<h1>power options</h1>
-				<br/>
-				<button onClick={this.shutdownnow}>shutdown now</button>
-				<h4>{this.state.sdnow}</h4>
-				{/*<button type="button" onClick={this.openDialog}>Open Dialog</button>
-                {
-                    this.state.isDialogOpen &&
-                    <Dialog
-                        title="Dialog Title"
-                        modal={true}
-						onClose={this.handleClose}
-						isDraggable={false}
-
-                        buttons={
-                            [{
-                                text: "Close",
-                                onClick: () => this.handleClose()
-                            }]
-                        }>
-                        <h1>Dialog Content</h1>
-                        <p>More Content. Anything goes here</p>
-                    </Dialog>
-                }*/}
-
-
-				<input type="text" value={this.state.shutdownaftermin} name="shutdownaftermin" onChange={this.handleChange}/>
-				<button onClick={this.shutdownaftergivenmin}>shutdown after mins</button>
-				<h4>{this.state.sdaftermin}</h4>
-				{/*<button onClick={this.shutdowncancel}>cancel the shutdown</button>
-				<h4>{this.state.cancelval}</h4>*/}
-
-				<h5>Give time in 24-hour format when you want to shutdown your pc</h5>
-				<input type="text" value={this.state.shutdownattime} name="shutdownattime" onChange={this.handleChange}/>
-				<button onClick={this.shutdownattime}>shutdown at given time</button>
-				<h4>{this.state.sdattime}</h4>
-
-				<button onClick={this.shutdowncancel}>cancel the shutdown</button>
-				<h4>{this.state.cancelval}</h4>
-
-
-				<button onClick={this.restartsystem}>restart system</button>
-				<h4>{this.state.restartsys}</h4>
-
-				<button onClick={this.rebootsystem}>reboot system</button>
-				<h4>{this.state.rebootsys}</h4>
-
-				<button onClick={this.suspendsystem}>suspend system</button>
-				<h4>{this.state.suspendsys}</h4>
-
-				<button onClick={this.hibernatesystem}>place system in hibernate mode</button>
-				<h4>{this.state.hibernatesys}</h4>
-
 				
-				<button onClick={this.screenlocksystem}>lock the screen</button>
-				<h4>{this.state.screenlocksys}</h4>
-	
-				<button onClick={this.logoutsystem}>logout</button>
-				<h4>{this.state.logoutsys}</h4>
-	
 				
 				
 				</center>
