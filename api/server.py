@@ -1,5 +1,5 @@
 from flask import Flask, request, make_response, jsonify, send_file, send_from_directory, safe_join, abort
-import shell, listAll, moveFiles, startp, health
+import shell, listAll, moveFiles, startp, health, summarize, timetable
 from flask_cors import CORS
 import shutil
 import os
@@ -141,9 +141,22 @@ def getHealthPredictionsFun():
 	return jsonify(health.getprediction(request.json['user']))
 
 
+"""					Notes 				"""
+@app.route('/getSummarize', methods=['POST'])
+def getSummarizeFun():
+	print("inside notes fun")
+	print(request.json['text'])
+	return jsonify(summarize.summarize_text(request.json['text'], len(request.json['text'])))
+
+"""					TimeTable 				"""
+@app.route('/getTimeTable', methods=['POST'])
+def getTimeTableFun():
+	print("inside timetable fun")
+	print(request.json['todos'])
+	return jsonify(timetable.createtimetable(request.json['todos']))
+
 
 
 
 if __name__ == '__main__': 
-	#os.system('./file.sh')
 	app.run(debug = True) 
